@@ -18,7 +18,9 @@ class ShortMaterialSerizlizer(ModelSerializer):
     class Meta:
         model = Material
         fields = ['numero_item',
-                  'descricao']
+                  'descricao',
+                  'quantidade_ano',
+                  'valor']
 
 
 class EstoqueSerializer(ModelSerializer):
