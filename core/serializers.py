@@ -5,19 +5,19 @@ from .models import Unidade, Departamento, Setor, Contrato
 class UnidadeSerizlizer(ModelSerializer):
     class Meta:
         model = Unidade
-        fields = ['name']
+        fields = ['id', 'name']
 
 
 class DepartamentoSerializer(ModelSerializer):
     class Meta:
         model = Departamento
-        fields = ['name', 'unidade']
+        fields = ['id', 'name', 'unidade']
 
 
 class SetorSerializer(ModelSerializer):
     class Meta:
         model = Setor
-        fields = ['name', 'departamento']
+        fields = ['id', 'name', 'departamento']
 
 
 class ContratoSerializer(ModelSerializer):
@@ -35,7 +35,8 @@ class ContratoSerializer(ModelSerializer):
 class ShortContratoSerializer(ModelSerializer):
     class Meta:
         model = Contrato
-        fields = ['numero',
+        fields = ['id',
+                  'numero',
                   'ano',
                   'descricao',
                   'fim']

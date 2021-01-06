@@ -18,7 +18,8 @@ class ServicoSerializer(ModelSerializer):
 class ShortServicoSerializer(ModelSerializer):
     class Meta:
         model = Servico
-        fields = ['numero_rs',
+        fields = ['id',
+                  'numero_rs',
                   'numero_os',
                   'data_abertura',
                   'data_fechamento',
@@ -38,6 +39,7 @@ class MatServSerializer(ModelSerializer):
 class ShortMatServSerializer(ModelSerializer):
     class Meta:
         model = MatServ
-        fields = ['numero_rs',
+        fields = ['id',
+                  'numero_rs',
                   'material',
                   'quantidade']

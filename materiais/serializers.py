@@ -17,7 +17,8 @@ class MaterialSerizlizer(ModelSerializer):
 class ShortMaterialSerizlizer(ModelSerializer):
     class Meta:
         model = Material
-        fields = ['numero_item',
+        fields = ['id',
+                  'numero_item',
                   'descricao',
                   'quantidade_ano',
                   'valor']
@@ -43,7 +44,9 @@ class EstoqueSerializer(ModelSerializer):
 class ShortEstoqueSerializer(ModelSerializer):
     class Meta:
         model = Estoque
-        fields = ['name', 'material',
+        fields = ['id',
+                  'name',
+                  'material',
                   'fabricante',
                   'modelo',
                   'data_entrada',
