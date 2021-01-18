@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, ListSerializer
 from .models import Servico, MatServ
 
 class ServicoSerializer(ModelSerializer):

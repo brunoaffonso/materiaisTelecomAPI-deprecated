@@ -25,3 +25,4 @@ class MatServViewSet(ModelViewSet):
         queryset = MatServ.objects.all()
         serializer = ShortMatServSerializer(queryset, many=True)
         return Response(serializer.data)
+
